@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Rhodium+Libre&display=swap');
+
+:root {
+    --base-color: #FFF0F0;
+    --text-color: #e484b4;
+    --primary-color: #FCE0E8;
+    --secondary-color: #FFE8E8;
+    --color-1: #FFD6E4;
+    --color-2: #FCE0E8;
+    --color-3: #FFD6E4;
+    --font-family: 'Delicious Handrawn', cursive
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html{
+    font-family: delicious Handrawn, cursive;
+    color: var(--text-color)
+
+}
+
+body{
+    padding: 1em;
+    background-color: var(--base-color)
+}
+
+h1,h2,h3{
+    font-family: delicious Handrawn, cursive;
+}
+
+nav{
+    margin: 1em auto 3em auto;
+    width: min(1000px,100%)
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2em
+}
+
+nav li:first-child{
+    margin-right: auto;
+    font-weight: bold
+}
+
+nav a:hover{
+    text-decoration: underline
+}
+
+header,section{
+    margin: 2em auto;
+    width: min(75em , 100%);
+    background-color: var(--color-1);
+    padding: min(2em,15%);
+    border-radius: 1 em
+}
+
+.flex-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em
+}
+
+header img{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom
+}
+
+.text-container{
+    flex: 0 1 34em
+}
+
+h1{
+    font-size: 2.5rem
+}
+
+.text-container p{
+    margin: .75 0 1em 0;
+    font-size: 1.25rem
+}
+
+.cta-button {
+    display: infinite-black;
+    text-decoration: none;
+    color:#FCE0E8;
+    background-color: var(--primary-color);
+    padding: .75 1.25em;
+    border-radius: .5em;
+    font-weight: 600
+}
+
+.secondary {
+    background-color: var(--secondary-color)
+}
+
+section {
+    padding: 3em min(2em,15%);
+    background-color: var(--color-2)
+}
+
+h2 {
+    font-size: 2rem
+}
+
+section p{
+    margin-top: 1em;
+    font-size: 1.25rem
+}
+
+section#about {
+    background-color: var(--color-3)
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: ifr ifr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em
+}
+
+.grid-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+footer a:hover {
+    text-decoration: underline
+}
+
+@media(max-width: 988px){
+    header {
+        text-align: center
+    }
+
+    header .text-container{
+        padding-top: 0
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display:block
+    }
+}
